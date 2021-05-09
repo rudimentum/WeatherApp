@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Weather App</string>
+    <string name="logo">Weather forecast</string>
+    <string name="hint_user_field">City</string>
+    <string name="main_btn">Find out</string>
+    <string name="empty_user_input">Type text</string>
+    <string name="loading">Waiting...</string>
+</resources>
