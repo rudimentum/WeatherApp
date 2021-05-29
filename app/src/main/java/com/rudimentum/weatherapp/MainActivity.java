@@ -22,6 +22,8 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import static com.rudimentum.weatherapp.utils.NetworkUtils.generateURL;
+
 public class MainActivity extends AppCompatActivity {
     // variables for find xml-views
     private EditText userField;
@@ -45,9 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     // user input
                     String city = userField.getText().toString().trim();
-                    // API key
-                    String key = "4e2ab79173bd043b42a072e7d3f4d751";
-                    String url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key + "&units=metric";
+                    String url = generateURL(city).toString();
 
                     new URLData().execute(url);
                 }
